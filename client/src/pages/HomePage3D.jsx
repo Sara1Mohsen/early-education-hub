@@ -1,20 +1,17 @@
-import React, { useRef, useState } from 'react';
-import { Navbar } from '../components/Navbar';
+import React, { useRef } from 'react';
+import { Layout } from '../components/Layout';
 import { HeroSection } from '../components/HeroSection';
 import { QuizSection } from '../components/QuizSection';
 import { FeaturesSection } from '../components/FeaturesSection';
-import { Footer } from '../components/Footer';
-export default function HomePage3D() { 
-const canvasRef = useRef(null);
 
-return (
-  <>
-  <Navbar />
-  <HeroSection canvasRef={canvasRef} />
-  <QuizSection />
-  <FeaturesSection />
-  <Footer />
-  
-    </>
+export default function HomePage3D() { 
+  const canvasRef = useRef(null);
+
+  return (
+    <Layout>
+      <HeroSection canvasRef={canvasRef} />
+      <QuizSection />
+      <FeaturesSection />
+    </Layout>
   );
-  }
+}

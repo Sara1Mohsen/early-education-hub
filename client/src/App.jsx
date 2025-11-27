@@ -10,11 +10,11 @@ function App() {
     <BrowserRouter>
       <div className="min-h-screen">
         <Navbar />
-        
+        <ProgramesCards />  
         <Routes>
-          <Route path="/" element={<HomePage3D />} />
+          {/* <Route path="/" element={<HomePage3D />} /> */}
           <Route path="/programs" element={<ProgramesCards />} />
-          {/* أضيفي routes تانية هنا */}
+          
         </Routes>
       </div>
     </BrowserRouter>

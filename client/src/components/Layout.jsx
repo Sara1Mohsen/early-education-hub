@@ -2,17 +2,15 @@ import React from 'react';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 
-/**
- * مكون التخطيط (Layout) يحيط بالمحتوى العام (مثل الصفحات)
- * ويحتوي على العناصر المشتركة مثل شريط التنقل والتذييل.
- */
 export function Layout({ children }) {
   return (
-    <div style={{ background: '#eee', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main>
+      
+      <main className="flex-1 w-full">
         {children}
       </main>
+      
       <Footer />
     </div>
   );
