@@ -1,4 +1,17 @@
+//  الصور من داخل assets
+// import vectaryImage from "../assets/Vectary_3D_Design_Workspace.png";// import canvaImage from "../../assets/Canva_3D_Design_Interface.png";
+// import tripoAI from "../../assets/Tripo_AI_3D_Model_Interface.png";
+// import splineAI from "../../assets/Spline_AI_Interactive_3D_Scene.png";
+// import vectaryImage from "../../assets/Vectary_3D_Design_Workspace.png";
+// import aFrameImage from "../../assets/A_Frame_3D_Scene.png";
+// import aeroImage from "../../assets/Aero_AR_Dinosaur_Desk.png";
+// import sketchupImage from "../../assets/SketchUp_Architectural_Modeling_Banner.png";
+// import arkiImage from "../../assets/Arki_AR_Architectural_Visualization.png";
+// import autodeskImage from "../../assets/Autodesk_3dsMax_Maya_Interface.png";
+// import blenderImage from "../../assets/Blender_SciFi_Spaceship_Sculpting.png";
 
+
+//  البيانات
 export const programs = [
   {
     id: 1,
@@ -7,7 +20,7 @@ export const programs = [
     description: "محتوى نظري شامل عن أساسيات التصميم 3D",
     icon: "BookOpen",
     accentColor: "#9579ff",
-    image: "/assets/3D_Animation_Pro_Scene.png",
+    image: '../assets/Vectary_3D_Design_Workspace.png',
     level: "نظري",
     duration: "أسبوعين"
   },
@@ -18,7 +31,7 @@ export const programs = [
     description: "تصميم رسومات ومجسمات بسيطة 3D",
     icon: "Wand2",
     accentColor: "#75c3ff",
-    image: "./assets/Canva_3D_Design_Interface.png",
+    // image: canvaImage,
     level: "مبتدئ",
     duration: "3 أسابيع"
   },
@@ -29,7 +42,7 @@ export const programs = [
     description: "توليد مجسمات 3D بالذكاء الاصطناعي",
     icon: "Cpu",
     accentColor: "#8fb28b",
-    image: "/assets/Tripo_AI_3D_Model_Interface.png",
+    // image: tripoAI,
     level: "مبتدئ",
     duration: "أسبوعين"
   },
@@ -40,7 +53,7 @@ export const programs = [
     description: "تصميم مشاهد 3D تفاعلية على الويب",
     icon: "Box",
     accentColor: "#ff9087",
-    image: "/assets/Spline_AI_Interactive_3D_Scene.png",
+    // image: splineAI,
     level: "مبتدئ",
     duration: "3 أسابيع"
   },
@@ -51,7 +64,7 @@ export const programs = [
     description: "تصميم مشهد 3D كامل أونلاين",
     icon: "Layers",
     accentColor: "#fcd34d",
-    image: "/assets/Aero_AR_Dinosaur_Desk.png",
+    // image: vectaryImage,
     level: "متوسط",
     duration: "4 أسابيع"
   },
@@ -62,7 +75,7 @@ export const programs = [
     description: "إطار عمل HTML لعمل مشاهد VR/3D",
     icon: "Code",
     accentColor: "#75c3ff",
-    image: "/assets/Aero_AR_Dinosaur_Desk.png",
+    // image: aFrameImage,
     level: "متوسط",
     duration: "4 أسابيع"
   },
@@ -73,7 +86,7 @@ export const programs = [
     description: "عرض موديلات 3D في الواقع المعزز AR",
     icon: "Eye",
     accentColor: "#c6b6ff",
-    image: "/assets/Aero_AR_Dinosaur_Desk.pngg",
+    // image: aeroImage, // ✔ تصحيح الامتداد العطلان
     level: "متوسط - AR",
     duration: "5 أسابيع"
   },
@@ -84,7 +97,7 @@ export const programs = [
     description: "تصميم معماري ونماذج 3D احترافية",
     icon: "Building",
     accentColor: "#ff9087",
-    image: "/assets/SketchUp_Architectural_Modeling_Banner.png",
+    // image: sketchupImage,
     level: "متوسط",
     duration: "6 أسابيع"
   },
@@ -95,7 +108,7 @@ export const programs = [
     description: "تصميم معماري 3D أونلاين احترافي",
     icon: "Building",
     accentColor: "#fcd34d",
-    image: "/assets/Arki_AR_Architectural_Visualization.png",
+    // image: arkiImage,
     level: "احترافي",
     duration: "8 أسابيع"
   },
@@ -106,7 +119,7 @@ export const programs = [
     description: "نمذجة وأنيميشن احترافي",
     icon: "Clapperboard",
     accentColor: "#5b9eff",
-    image: "/assets/Aero_AR_Dinosaur_Desk.png",
+    // image: autodeskImage,
     level: "احترافي",
     duration: "10 أسابيع"
   },
@@ -117,7 +130,7 @@ export const programs = [
     description: "أقوى برنامج مفتوح المصدر للتصميم 3D",
     icon: "PackageOpen",
     accentColor: "#8fb28b",
-    image: "/assets/Blender_SciFi_Spaceship_Sculpting.png",
+    // image: blenderImage,
     level: "احترافي",
     duration: "12 أسبوع"
   }

@@ -5,7 +5,6 @@ import { programs } from '../data/programsData';
 
 export default function ProgramesCards() {
   const [selectedProgram, setSelectedProgram] = useState(null);
-
   if (selectedProgram) {
     return (
       <div style={{ background: 'linear-gradient(to bottom, #3b0764, #000)' }} className="min-h-screen">

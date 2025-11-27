@@ -15,7 +15,7 @@ export function Footer() {
           <span style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#fff' }}>البوابة ثلاثية الأبعاد</span>
         </div>
         <p style={{ color: '#9ca3af' }}>
-          © 2024 جميع الحقوق محفوظة | تم التطوير بواسطة شروق محمد
+          © 2024 جميع الحقوق محفوظة | تم التطوير بواسطة ساره
         </p>
       </div>
     </footer>

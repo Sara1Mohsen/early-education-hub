@@ -2,11 +2,11 @@ import React from 'react';
 import { GraduationCap } from 'lucide-react';
 
 export function QuizSection() {
-  const quizFeatures = [
-    { emoji: '📊', title: 'أسئلة متنوعة', description: 'اختر من متعدد وصح وخطأ', background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2))', borderColor: 'rgba(139, 92, 246, 0.3)' },
-    { emoji: '🎯', title: 'تقييم فوري', description: 'احصل على نتيجتك مباشرة', background: 'linear-gradient(135deg, rgba(34, 211, 238, 0.2), rgba(59, 130, 246, 0.2))', borderColor: 'rgba(34, 211, 238, 0.3)' },
-    { emoji: '🚀', title: 'تعلم تفاعلي', description: 'اكتشف مستواك الرقمي', background: 'linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(239, 68, 68, 0.2))', borderColor: 'rgba(249, 115, 22, 0.3)' },
-  ];
+  // const quizFeatures = [
+  //   { emoji: '📊', title: 'أسئلة متنوعة', description: 'اختر من متعدد وصح وخطأ', background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2))', borderColor: 'rgba(139, 92, 246, 0.3)' },
+  //   { emoji: '🎯', title: 'تقييم فوري', description: 'احصل على نتيجتك مباشرة', background: 'linear-gradient(135deg, rgba(34, 211, 238, 0.2), rgba(59, 130, 246, 0.2))', borderColor: 'rgba(34, 211, 238, 0.3)' },
+  //   { emoji: '🚀', title: 'تعلم تفاعلي', description: 'اكتشف مستواك الرقمي', background: 'linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(239, 68, 68, 0.2))', borderColor: 'rgba(249, 115, 22, 0.3)' },
+  // ];
 
   return (
     <div id="quiz" style={{
@@ -15,7 +15,7 @@ export function QuizSection() {
     }}>
       <div style={{ maxWidth: '2000px', margin: '0 auto', direction: 'rtl' }}>
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+        {/* <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <div style={{
             display: 'inline-block',
             background: 'linear-gradient(to right, #a855f7, #ec4899)',
@@ -39,13 +39,13 @@ export function QuizSection() {
           <p style={{ color: '#6b7280', fontSize: '1rem' }}>
             التصميم ثلاثي الأبعاد (3D) • الواقع الافتراضي (VR) • الواقع المعزز (AR) • الذكاء الاصطناعي (AI)
           </p>
-        </div>
+        </div> */}
 
         {/* Iframe for Quiz */}
         <div style={{
           background: 'rgba(255, 255, 255, 0.05)',
-          borderRadius: '1.5rem',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
+          borderRadius: '1.7rem',
+          // border: '1px solid rgba(255, 255, 255, 0.1)',
           overflow: 'hidden',
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
         }}>
@@ -67,7 +67,7 @@ export function QuizSection() {
         </div>
 
         {/* Quiz Features Grid */}
-        <div style={{
+        {/* <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
           gap: '1.5rem',
@@ -85,7 +85,7 @@ export function QuizSection() {
               <p style={{ color: '#9ca3af' }}>{feature.description}</p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
