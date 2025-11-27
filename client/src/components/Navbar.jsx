@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import logo from '../assets/logo.jpeg';
 export function Navbar() {
 
@@ -20,7 +20,7 @@ export function Navbar() {
             <img 
               src={logo} 
               alt="شعار البوابة" 
-              style={{ height: '40px', borderRadius: '5px' }} // يمكنك تعديل الحجم حسب الحاجة
+              style={{ height: '40px', borderRadius: '5px' }}
             />
             <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#fff' }}>EduVerse ال جرافيك للجميع</span>
 
@@ -31,6 +31,7 @@ export function Navbar() {
             <a href="#home" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>الرئيسية</a>
             <a href="#quiz" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>الاختبار</a>
             <a href="#features" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>المميزات</a>
+            <a href="#programs" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>برامج الذكاء الاصطناعي</a>
             <button style={{
               background: 'linear-gradient(to right, #a855f7, #ec4899)',
               color: '#fff',
@@ -44,10 +45,7 @@ export function Navbar() {
             </button>
           </div>
           
-          {/* Mobile Menu Icon (يمكن إضافتها لاحقاً لإكمال الاستجابة) */}
-          {/* <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button> */}
+
         </div>
       </div>
     </nav>

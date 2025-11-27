@@ -1,15 +1,26 @@
 // import { useState } from 'react'
-import HomePage3D from './pages/HomePage3D'; // هذا يعني: استيراد الافتراضي (default)
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage3D from './pages/HomePage3D'; 
+import ProgramesCards from './pages/ProgramesCards';
+import { Navbar } from './components/Navbar'
 import './App.css'
 
 function App() {
-
-
   return (
-    <>
-      <HomePage3D />
-    </>
-  )
+    <BrowserRouter>
+      <div className="min-h-screen">
+        <Navbar />
+        
+        <Routes>
+          <Route path="/" element={<HomePage3D />} />
+          <Route path="/programs" element={<ProgramesCards />} />
+          {/* أضيفي routes تانية هنا */}
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
+
+

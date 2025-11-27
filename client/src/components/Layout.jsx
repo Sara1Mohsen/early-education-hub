@@ -8,7 +8,7 @@ import { Footer } from './Footer';
  */
 export function Layout({ children }) {
   return (
-    <div style={{ background: '#000', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
+    <div style={{ background: '#eee', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
       <Navbar />
       <main>
         {children}

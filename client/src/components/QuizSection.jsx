@@ -13,7 +13,7 @@ export function QuizSection() {
       padding: '5rem 1.5rem',
       background: 'linear-gradient(to bottom, #3b0764, #000)'
     }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', direction: 'rtl' }}>
+      <div style={{ maxWidth: '2000px', margin: '0 auto', direction: 'rtl' }}>
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <div style={{
