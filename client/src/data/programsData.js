@@ -18,7 +18,7 @@ export const programs = [
     description: "تصميم رسومات ومجسمات بسيطة 3D",
     icon: "Wand2",
     accentColor: "#75c3ff",
-    image: "/assets/Canva_3D_Design_Interface.png",
+    image: "./assets/Canva_3D_Design_Interface.png",
     level: "مبتدئ",
     duration: "3 أسابيع"
   },

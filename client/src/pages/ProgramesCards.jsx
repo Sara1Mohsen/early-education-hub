@@ -20,7 +20,7 @@ export default function ProgramesCards() {
   return (
     <div style={{ background: 'linear-gradient(to bottom, #3b0764, #000)' }} className="min-h-screen w-full">
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16 px-8">
+      {/* <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16 px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-6xl font-bold mb-4">
             برامج التصميم ثلاثي الأبعاد
@@ -29,22 +29,22 @@ export default function ProgramesCards() {
             11 برنامج شامل من المستوى المبتدئ إلى الاحترافي
           </p>
         </div>
-      </div>
+      </div> */}
 
-      {/* Programs Grid */}
-      <div className="w-full max-w-7xl mx-auto px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {programs.map((program) => (
-            <ProgramCard
-              key={program.id}
-              program={program}
-              onClick={setSelectedProgram}
-            />
-          ))}
-        </div>
-      </div>
+{/* Programs Grid */}
+<div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+  <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
+    {programs.map((program) => (
+      <ProgramCard
+        key={program.id}
+        program={program}
+        onClick={setSelectedProgram}
+      />
+    ))}
+  </div>
+</div>
 
-      {/* Footer Info */}
+      {/* Footer Info
       <div className="bg-white/5 backdrop-blur-sm border-t border-white/10 py-12 px-8 mt-16">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -54,7 +54,7 @@ export default function ProgramesCards() {
             جميع البرامج تشمل وصول مدى الحياة، دروس تفاعلية، شهادة معتمدة، ودعم فني متواصل
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

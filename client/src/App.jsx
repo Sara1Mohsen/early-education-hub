@@ -3,16 +3,15 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage3D from './pages/HomePage3D'; 
 import ProgramesCards from './pages/ProgramesCards';
 import { Navbar } from './components/Navbar'
-import './App.css'
+// import './App.css'
 
 function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen">
-        <Navbar />
-        <ProgramesCards />  
+        <Navbar /> 
         <Routes>
-          {/* <Route path="/" element={<HomePage3D />} /> */}
+          <Route path="/" element={<HomePage3D />} />
           <Route path="/programs" element={<ProgramesCards />} />
           
         </Routes>
