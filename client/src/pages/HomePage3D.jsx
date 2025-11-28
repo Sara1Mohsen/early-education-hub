@@ -10,8 +10,9 @@ export default function HomePage3D() {
   return (
     <Layout>
       <HeroSection canvasRef={canvasRef} />
-      <QuizSection />
       <FeaturesSection />
+      <QuizSection />
+      
     </Layout>
   );
 }

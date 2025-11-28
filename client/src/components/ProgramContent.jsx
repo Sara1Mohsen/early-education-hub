@@ -52,7 +52,7 @@ export default function ProgramContent({ program, onBack }) {
 
           <div className="space-y-6">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
-              <h2 className="text-2xl font-bold text-white mb-3">📋 نظرة عامة</h2>
+              <h2 className="text-2xl font-bold text-white mb-3"> نظرة عامة</h2>
               <p className="text-gray-300 leading-relaxed">
                 برنامج تدريبي شامل مصمم لمساعدتك على إتقان {program.name}. 
                 ستتعلم من خلال دروس تفاعلية، تمارين عملية، ومشاريع واقعية.
@@ -60,7 +60,7 @@ export default function ProgramContent({ program, onBack }) {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
-              <h2 className="text-2xl font-bold text-white mb-3">🎯 ماذا ستتعلم</h2>
+              <h2 className="text-2xl font-bold text-white mb-3"> ماذا ستتعلم</h2>
               <ul className="space-y-2 text-gray-300">
                 <li className="flex items-start gap-2">
                   <span style={{ color: program.accentColor }} className="text-lg">✓</span>
@@ -82,7 +82,7 @@ export default function ProgramContent({ program, onBack }) {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
-              <h2 className="text-2xl font-bold text-white mb-3">⏱️ تفاصيل البرنامج</h2>
+              <h2 className="text-2xl font-bold text-white mb-3"> تفاصيل البرنامج</h2>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <p className="text-gray-400 text-sm">المدة الزمنية</p>
@@ -96,22 +96,22 @@ export default function ProgramContent({ program, onBack }) {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
-              <h2 className="text-2xl font-bold text-white mb-3">🎁 ما ستحصل عليه</h2>
+              <h2 className="text-2xl font-bold text-white mb-3"> ما ستحصل عليه</h2>
               <ul className="space-y-2 text-gray-300">
                 <li className="flex items-center gap-2">
-                  <span>🎓</span>
+                  
                   <span>شهادة إتمام معتمدة</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span>📚</span>
+                  
                   <span>وصول مدى الحياة للمحتوى</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span>💬</span>
+                  
                   <span>دعم فني متواصل</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span>🎯</span>
+                  
                   <span>مشاريع عملية قابلة للتطبيق</span>
                 </li>
               </ul>
