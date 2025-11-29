@@ -28,8 +28,8 @@ export function Navbar() {
 
           {/* Desktop Menu */}
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-            <a href="/" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>الرئيسية</a>
-            <a href="#quiz" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>الاختبار</a>
+            <a href="/QuizPage" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>الرئيسية</a>
+            <a href="/" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>الاختبار</a>
             <a href="#features" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>المميزات</a>
             <a href="programs" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>برامج الذكاء الاصطناعي</a>
             <button style={{
