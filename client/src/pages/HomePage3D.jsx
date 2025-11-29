@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Layout } from '../components/Layout';
 import { HeroSection } from '../components/HeroSection';
-import { QuizSection } from '../components/QuizSection';
+// import { QuizSection } from '../components/QuizSection';
 import { FeaturesSection } from '../components/FeaturesSection';
 import VideoScene from "../components/VideoScene";
 export default function HomePage3D() { 
@@ -12,7 +12,7 @@ export default function HomePage3D() {
       <VideoScene />
       <HeroSection canvasRef={canvasRef} />
       <FeaturesSection />
-      <QuizSection />
+      {/* <QuizSection /> */}
       
     </Layout>
   );

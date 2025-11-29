@@ -1,4 +1,3 @@
-import React from 'react';
 import { Clock } from 'lucide-react';
 
 export function QuizTimer({ timeLeft, totalTime }) {
@@ -6,7 +5,7 @@ export function QuizTimer({ timeLeft, totalTime }) {
   const isUrgent = timeLeft <= 5;
 
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center  ">
       <div className="relative">
         <Clock className={`w-6 h-6 ${isUrgent ? 'text-red-400 animate-pulse' : 'text-yellow-400'}`} />
       </div>

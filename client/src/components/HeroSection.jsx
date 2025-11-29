@@ -64,7 +64,7 @@ export function HeroSection({ canvasRef }) {
 
           {/* Button */}
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="#quiz" style={{ textDecoration: 'none' }}>
+            <a href="QuizPage" style={{ textDecoration: 'none' }}>
               <button style={{
                 background: 'linear-gradient(to right, #a855f7, #ec4899)',
                 color: '#fff',

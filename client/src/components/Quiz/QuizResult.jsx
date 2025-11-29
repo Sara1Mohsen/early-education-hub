@@ -41,9 +41,9 @@ export function QuizResult({ score, totalQuestions, onRestart }) {
           <div className="text-8xl mb-4 animate-bounce">
             {levelInfo.icon}
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-2">
+          {/* <h1 className="text-4xl md:text-5xl font-extrabold mb-2">
             أحسنت! 🎉
-          </h1>
+          </h1> */}
           <p className="text-xl text-gray-300">
             لقد أكملت اختبار تحديد المستوى
           </p>
@@ -95,7 +95,7 @@ export function QuizResult({ score, totalQuestions, onRestart }) {
         <div className="space-y-4">
           <button
             onClick={() => navigate('/programs')}
-            className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg py-4 px-8 rounded-full shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3"
+            className="w-100 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg py-4 px-8 rounded-full shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3"
           >
             <span>استكشف البرامج التعليمية</span>
             <ArrowRight className="w-6 h-6" />
@@ -103,7 +103,7 @@ export function QuizResult({ score, totalQuestions, onRestart }) {
 
           <button
             onClick={onRestart}
-            className="w-full bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 border border-white/20"
+          className="w-100 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 border border-white/20"
           >
             إعادة الاختبار
           </button>
