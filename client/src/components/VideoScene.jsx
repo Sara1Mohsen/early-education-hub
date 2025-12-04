@@ -37,7 +37,7 @@ return (
 {/* BUTTON */}
             <GradientButton
             text="سجّل الآن" 
-            href="#register"
+            href="/login"
             style={{
                 background: 'linear-gradient(0deg, #020A1C 0%, #0F1C40 70%, #0A1433 100%)',
                 position: 'relative',

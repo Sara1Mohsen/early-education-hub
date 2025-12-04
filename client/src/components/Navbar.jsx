@@ -32,7 +32,9 @@ export function Navbar() {
             <a href="/QuizPage" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>الاختبار</a>
             <a href="#features" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>المميزات</a>
             <a href="programs" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>برامج الذكاء الاصطناعي</a>
-            <button style={{
+            <button 
+              href ="/login"
+              style={{
               background: 'linear-gradient(to right, #a855f7, #ec4899)',
               color: '#fff',
               padding: '0.5rem 1.5rem',

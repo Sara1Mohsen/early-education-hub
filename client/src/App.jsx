@@ -3,24 +3,27 @@ import HomePage3D from './pages/HomePage3D';
 import ProgramesCards from './pages/ProgramesCards';
 import { Navbar } from './components/Navbar'
 import QuizPage from './pages/QuizPage';
-import { Layout } from './components/Layout';
-// import { QuizLayout } from './components/QuizLayout';
+import AuthPage from './pages/AuthPage';
+import { AuthProvider } from './context/AuthContext';
+
 function App() {
   return (
-    <BrowserRouter>
-      <div className="min-h-screen">
-        <Navbar /> 
-        {/* <QuizPage /> */}
-        <Routes>
-          <Route path="/" element={<HomePage3D />} />
-          <Route path="/programs" element={<ProgramesCards />} />
-          <Route path="/QuizPage" element={<QuizPage />} />              
-        </Routes> 
-      </div>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <div className="min-h-screen">
+          <Navbar />
+
+          <Routes>
+            <Route path="/login" element={<AuthPage />} />
+            <Route path="/" element={<HomePage3D />} />
+            <Route path="/programs" element={<ProgramesCards />} />
+            <Route path="/QuizPage" element={<QuizPage />} />
+          </Routes>
+
+        </div>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 
 export default App;
-
-
