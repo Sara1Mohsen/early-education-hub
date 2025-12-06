@@ -7,7 +7,7 @@ export default function ProgramesCards() {
   const [selectedProgram, setSelectedProgram] = useState(null);
   if (selectedProgram) {
     return (
-      <div style={{ background: 'linear-gradient(to bottom, #3b0764, #000)' }} className="min-h-screen">
+      <div style={{ background: 'bg-gradient-to-r from-purple-500 to-pink-500' }} className="min-h-screen">
         <ProgramContent 
           program={selectedProgram} 
           onBack={() => setSelectedProgram(null)} 

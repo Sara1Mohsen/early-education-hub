@@ -24,17 +24,7 @@ export const programs = [
     level: "نظري",
     duration: "أسبوعين"
   },
-  {
-    id: 2,
-    chapter: "الفصل الثاني",
-    name: "Canva",
-    description: "تصميم رسومات ومجسمات بسيطة 3D",
-    icon: "Wand2",
-    accentColor: "#75c3ff",
-    // image: canvaImage,
-    level: "مبتدئ",
-    duration: "3 أسابيع"
-  },
+
   {
     id: 3,
     chapter: "الفصل الثاني",

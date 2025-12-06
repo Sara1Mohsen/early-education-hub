@@ -12,10 +12,10 @@ export function Footer() {
       <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
           <Sparkles size={24} color="#a855f7" />
-          <span style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#fff' }}>البوابة ثلاثية الأبعاد</span>
+          <span style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#fff' }}>EduVerse</span>
         </div>
         <p style={{ color: '#9ca3af' }}>
-          © 2024 جميع الحقوق محفوظة | تم التطوير بواسطة ساره
+          © 2025 جميع الحقوق محفوظة
         </p>
       </div>
     </footer>

@@ -4,16 +4,20 @@ import { HeroSection } from '../components/HeroSection';
 // import { QuizSection } from '../components/QuizSection';
 import { FeaturesSection } from '../components/FeaturesSection';
 import VideoScene from "../components/VideoScene";
+import { ProtectedRoute } from '../components/ProtectedRoute';
+
 export default function HomePage3D() { 
   const canvasRef = useRef(null);
 
   return (
     <Layout>
+      <ProtectedRoute>
       <VideoScene />
       <HeroSection canvasRef={canvasRef} />
       <FeaturesSection />
       {/* <QuizSection /> */}
-      
+      </ProtectedRoute>
+
     </Layout>
   );
 }

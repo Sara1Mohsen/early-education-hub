@@ -22,7 +22,7 @@ export function Navbar() {
               alt="شعار البوابة" 
               style={{ height: '40px', borderRadius: '5px' }}
             />
-            <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#fff' }}>EduVerse ال جرافيك للجميع</span>
+            <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#fff' }}>EduVerse</span>
 
           </div>
 
@@ -30,7 +30,7 @@ export function Navbar() {
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
             <a href="/" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>الرئيسية</a>
             <a href="/QuizPage" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>الاختبار</a>
-            <a href="#features" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>المميزات</a>
+            <a href="/#features" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>المميزات</a>
             <a href="programs" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>برامج الذكاء الاصطناعي</a>
             <button 
               href ="/login"

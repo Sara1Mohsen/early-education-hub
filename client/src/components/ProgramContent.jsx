@@ -3,8 +3,8 @@ import { ArrowRight } from 'lucide-react';
 
 export default function ProgramContent({ program, onBack }) {
   return (
-    <div className="min-h-screen p-8">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen ">
+      <div className="max mx-auto">
         <button
           onClick={onBack}
           className="mb-8 flex items-center gap-2 text-purple-400 hover:text-purple-300 font-semibold transition-colors"

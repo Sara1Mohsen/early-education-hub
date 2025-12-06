@@ -57,7 +57,7 @@ export function LoginForm({ onSwitchToRegister }) {
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">البريد الإلكتروني</label>
             <div className="relative">
-              <Mail className="absolute right-3 top-3 w-5 h-5 text-gray-400" />
+              <Mail className="absolute right-2 top-2  w-4 h-4 text-gray-400" />
               <input
                 type="email"
                 value={formData.email}
@@ -71,13 +71,13 @@ export function LoginForm({ onSwitchToRegister }) {
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">كلمة المرور</label>
             <div className="relative">
-              <Lock className="absolute right-3 top-3 w-5 h-5 text-gray-400" />
+              <Lock className="absolute right-3 top-1 w-4 h-4 text-gray-400" />
               <input
                 type="password"
                 value={formData.password}
                 onChange={(e) => setFormData({...formData, password: e.target.value})}
-                className="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                placeholder="••••••••"
+                className="w-full pr-10 pl-4 py-3  border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                
               />
             </div>
           </div>

@@ -35,7 +35,7 @@ return (
 
 
 {/* BUTTON */}
-            <GradientButton
+            {/* <GradientButton
             text="سجّل الآن" 
             href="/login"
             style={{
@@ -48,7 +48,7 @@ return (
                 fontWeight: 'bold',
                 boxShadow: '0 0 20px rgba(59, 130, 246, 0.6)'
                 }}
-            />
+            /> */}
         </div>
     </div>
     );

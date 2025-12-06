@@ -50,7 +50,7 @@ export function RegisterForm({ onSwitchToLogin }) {
     if (result.success) {
       setSuccess(result.message);
       setTimeout(() => {
-        navigate('/quiz'); // الانتقال لصفحة الاختبار
+        navigate('/'); // الانتقال لصفحة الاختبار
       }, 1500);
     } else {
       setError(result.message);
