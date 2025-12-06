@@ -1,20 +1,20 @@
 export const QUIZ_QUESTIONS = [
   // أسئلة الاختيار من متعدد
-  {
-    id: 1,
-    type: "multiple-choice",
-    question: "التصميم ثلاثي الأبعاد هو عملية تهدف إلى.......",
-    options: [
-      { text: "إنشاء نماذج تحاكي الواقع بأبعادها الثلاثة", isCorrect: true },
-      { text: "معالجة النصوص والصور", isCorrect: false },
-      { text: "تصميم مواقع إلكترونية", isCorrect: false }
-    ],
-    timeLimit: 20
-  },
+  // {
+  //   id: 1,
+  //   type: "multiple-choice",
+  //   question: "التصميم ثلاثي الأبعاد هو عملية تهدف إلى",
+  //   options: [
+  //     { text: "إنشاء نماذج تحاكي الواقع بأبعادها الثلاثة", isCorrect: true },
+  //     { text: "معالجة النصوص والصور", isCorrect: false },
+  //     { text: "تصميم مواقع إلكترونية", isCorrect: false }
+  //   ],
+  //   timeLimit: 20
+  // },
   {
     id: 2,
     type: "multiple-choice",
-    question: "أيّ من الأدوات التالية تُستخدم في تصميم نماذج ثلاثية الأبعاد......",
+    question: "أيّ من الأدوات التالية تُستخدم في تصميم نماذج ثلاثية الأبعاد",
     options: [
       { text: "Blender", isCorrect: true },
       { text: "Tinkercad", isCorrect: true },
@@ -27,7 +27,7 @@ export const QUIZ_QUESTIONS = [
   {
     id: 3,
     type: "multiple-choice",
-    question: "من أدوات التصميم ثلاثي الأبعاد السهلة للمبتدئين........",
+    question: "من أدوات التصميم ثلاثي الأبعاد السهلة للمبتدئين",
     options: [
       { text: "Blender", isCorrect: false },
       { text: "Unity", isCorrect: false },
@@ -51,7 +51,7 @@ export const QUIZ_QUESTIONS = [
   {
     id: 5,
     type: "multiple-choice",
-    question: "من الأدوات المستخدمة لإنشاء بيئات واقع افتراضي عبر المتصفح..........",
+    question: "من الأدوات المستخدمة لإنشاء بيئات واقع افتراضي عبر المتصفح",
     options: [
       { text: "A-Frame", isCorrect: true },
       { text: "Adobe Aero", isCorrect: false },
