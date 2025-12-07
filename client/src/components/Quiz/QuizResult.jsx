@@ -52,7 +52,7 @@ export function QuizResult({ score, totalQuestions, onRestart }) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white p-6 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white p-6 flex items-center justify-center">
       <div className="max-w-3xl w-full space-y-8">
         {/* Success Animation */}
         <div className="text-center">

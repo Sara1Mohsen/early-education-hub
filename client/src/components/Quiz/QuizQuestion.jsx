@@ -15,7 +15,7 @@ export function QuizQuestion({
   const isAnswerSelected = selectedOption !== null;
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white p-4 sm:p-8 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white p-4 sm:p-8 flex items-center justify-center">
       <div className="w-full max-w-5xl">
         {/* Header */}
         <div className="text-center mb-12">
