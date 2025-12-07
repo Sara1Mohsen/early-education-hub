@@ -13,7 +13,7 @@ export function QuizResult({ score, totalQuestions, onRestart }) {
         color: 'from-green-400 to-emerald-500',
         icon: '🏆',
         message: 'ممتاز! لديك معرفة قوية في التصميم ثلاثي الأبعاد',
-        programPath: '/programs/advanced', // المسار للبرنامج المتقدم
+        programPath: '/programs',
         programName: 'البرنامج المتقدم'
       };
     } else if (percentage >= 50) {
@@ -22,7 +22,7 @@ export function QuizResult({ score, totalQuestions, onRestart }) {
         color: 'from-blue-400 to-cyan-500',
         icon: '⭐',
         message: 'جيد! لديك أساسيات جيدة ويمكنك التطور أكثر',
-        programPath: '/programs/intermediate', // المسار للبرنامج المتوسط
+        programPath: '/programs',
         programName: 'البرنامج المتوسط'
       };
     } else {
@@ -31,7 +31,7 @@ export function QuizResult({ score, totalQuestions, onRestart }) {
         color: 'from-yellow-400 to-orange-500',
         icon: '🌱',
         message: 'رائع! أنت في بداية رحلتك التعليمية',
-        programPath: '/programs/beginner', // المسار للبرنامج المبتدئ
+        programPath: '/programs',
         programName: 'البرنامج التأسيسي'
       };
     }
@@ -40,6 +40,14 @@ export function QuizResult({ score, totalQuestions, onRestart }) {
   const levelInfo = getLevelInfo();
 
   const handleNavigateToProgram = () => {
+    // احفظ إن الاختبار اتعمل
+    localStorage.setItem('quizCompleted', 'true');
+    
+    // احفظ المستوى كمان (مفيد لو عايز تستخدمه بعدين)
+    localStorage.setItem('userLevel', levelInfo.level);
+    localStorage.setItem('quizScore', percentage.toString());
+    
+    // روح على البرنامج المناسب
     navigate(levelInfo.programPath);
   };
 

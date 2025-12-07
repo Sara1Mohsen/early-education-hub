@@ -1,60 +1,46 @@
-//  الصور من داخل assets
-// import vectaryImage from "../assets/Vectary_3D_Design_Workspace.png";// import canvaImage from "../../assets/Canva_3D_Design_Interface.png";
-// import tripoAI from "../../assets/Tripo_AI_3D_Model_Interface.png";
-// import splineAI from "../../assets/Spline_AI_Interactive_3D_Scene.png";
-// import vectaryImage from "../../assets/Vectary_3D_Design_Workspace.png";
-// import aFrameImage from "../../assets/A_Frame_3D_Scene.png";
-// import aeroImage from "../../assets/Aero_AR_Dinosaur_Desk.png";
-// import sketchupImage from "../../assets/SketchUp_Architectural_Modeling_Banner.png";
-// import arkiImage from "../../assets/Arki_AR_Architectural_Visualization.png";
-// import autodeskImage from "../../assets/Autodesk_3dsMax_Maya_Interface.png";
-// import blenderImage from "../../assets/Blender_SciFi_Spaceship_Sculpting.png";
+// // الصور من داخل assets
+import tripoAI from "../assets/T.png";
+import splineAI from "../assets/SK.png";
+import vectaryImage from "../assets/AK.png";
+import aFrameImage from "../assets/AR.png";
+import aeroImage from "../assets/AR.png";
+// import sketchupImage from "../assets/SK.png";
+import arkiImage from "../assets/AK.png";
+import autodeskImage from "../assets/AN.png";
+import blenderImage from "../assets/BL.png";
 
-
-//  البيانات
+// // البيانات
 export const programs = [
   {
-    id: 1,
-    chapter: "الفصل الأول",
-    name: "مقدمة في التصميم ثلاثي الأبعاد",
-    description: "محتوى نظري شامل عن أساسيات التصميم 3D",
-    icon: "BookOpen",
-    accentColor: "#9579ff",
-    image: '../assets/Vectary_3D_Design_Workspace.png',
-    level: "نظري",
-    duration: "أسبوعين"
-  },
-
-  {
     id: 3,
-    chapter: "الفصل الثاني",
+    chapter: "الفصل الأول",
     name: "Tripo AI",
     description: "توليد مجسمات 3D بالذكاء الاصطناعي",
     icon: "Cpu",
-    accentColor: "#8fb28b",
-    // image: tripoAI,
+    accentColor: "#75c3ff",
+    image: tripoAI, // ✅ صحيح
     level: "مبتدئ",
     duration: "أسبوعين"
   },
   {
     id: 4,
-    chapter: "الفصل الثاني",
+    chapter: "الفصل الأول",
     name: "Spline AI",
     description: "تصميم مشاهد 3D تفاعلية على الويب",
     icon: "Box",
-    accentColor: "#ff9087",
-    // image: splineAI,
+    accentColor: "#75c3ff",
+    image: splineAI, // ✅
     level: "مبتدئ",
     duration: "3 أسابيع"
   },
   {
     id: 5,
-    chapter: "الفصل الثالث",
+    chapter: "الفصل الأول",
     name: "Vectary",
     description: "تصميم مشهد 3D كامل أونلاين",
     icon: "Layers",
-    accentColor: "#fcd34d",
-    // image: vectaryImage,
+    accentColor: "#75c3ff",
+    image: vectaryImage, // ✅
     level: "متوسط",
     duration: "4 أسابيع"
   },
@@ -65,7 +51,7 @@ export const programs = [
     description: "إطار عمل HTML لعمل مشاهد VR/3D",
     icon: "Code",
     accentColor: "#75c3ff",
-    // image: aFrameImage,
+    image: aFrameImage, // ✅
     level: "متوسط",
     duration: "4 أسابيع"
   },
@@ -75,9 +61,9 @@ export const programs = [
     name: "Adobe Aero",
     description: "عرض موديلات 3D في الواقع المعزز AR",
     icon: "Eye",
-    accentColor: "#c6b6ff",
-    // image: aeroImage, // ✔ تصحيح الامتداد العطلان
-    level: "متوسط - AR",
+    accentColor: "#75c3ff",
+    image: aeroImage, // ✅
+    level: "متوسط",
     duration: "5 أسابيع"
   },
   {
@@ -86,9 +72,9 @@ export const programs = [
     name: "SketchUp",
     description: "تصميم معماري ونماذج 3D احترافية",
     icon: "Building",
-    accentColor: "#ff9087",
-    // image: sketchupImage,
-    level: "متوسط",
+    accentColor: "#75c3ff",
+    image: tripoAI, // ✅
+    level: "متقدم",
     duration: "6 أسابيع"
   },
   {
@@ -97,8 +83,8 @@ export const programs = [
     name: "Arki",
     description: "تصميم معماري 3D أونلاين احترافي",
     icon: "Building",
-    accentColor: "#fcd34d",
-    // image: arkiImage,
+    accentColor: "#75c3ff",
+    image: arkiImage, // ✅
     level: "احترافي",
     duration: "8 أسابيع"
   },
@@ -108,9 +94,9 @@ export const programs = [
     name: "Autodesk (3ds Max/Maya)",
     description: "نمذجة وأنيميشن احترافي",
     icon: "Clapperboard",
-    accentColor: "#5b9eff",
-    // image: autodeskImage,
-    level: "احترافي",
+    accentColor: "#75c3ff",
+    image: autodeskImage, // ✅
+    level: "متقدم",
     duration: "10 أسابيع"
   },
   {
@@ -119,9 +105,9 @@ export const programs = [
     name: "Blender",
     description: "أقوى برنامج مفتوح المصدر للتصميم 3D",
     icon: "PackageOpen",
-    accentColor: "#8fb28b",
-    // image: blenderImage,
-    level: "احترافي",
+    accentColor: "#75c3ff",
+    image: blenderImage, // ✅
+    level: "متقدم",
     duration: "12 أسبوع"
   }
 ];

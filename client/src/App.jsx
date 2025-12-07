@@ -11,7 +11,7 @@ function App() {
     <AuthProvider>
       <BrowserRouter>
         <div className="min-h-screen">
-          <Navbar />
+          {/* <Navbar /> */}
 
           <Routes>
             <Route path="/login" element={<AuthPage />} />
