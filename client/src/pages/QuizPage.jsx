@@ -1,10 +1,33 @@
+// src/pages/QuizPage.jsx
 import React, { useState, useEffect, useCallback } from 'react';
 import { QuizStart } from '../components/Quiz/QuizStart';
 import { QuizQuestion } from '../components/Quiz/QuizQuestion';
 import { QuizResult } from '../components/Quiz/QuizResult';
-import { QUIZ_QUESTIONS } from '../data/quizQuestions';
+import {
+  BEGINNER_QUIZ,
+  INTERMEDIATE_QUIZ,
+  ADVANCED_QUIZ,
+  QUIZ_LEVELS
+} from '../data/quizQuestionsByLevel';
 
-export default function QuizPage() {
+// تحقق من المستوى من URL أو من الـ props (سنستخدم هنا الـ params)
+export default function QuizPage({ level = 'beginner' }) {
+  // تحديد الكويز حسب المستوى
+  let quizQuestions;
+  switch (level) {
+    case 'beginner':
+      quizQuestions = BEGINNER_QUIZ;
+      break;
+    case 'intermediate':
+      quizQuestions = INTERMEDIATE_QUIZ;
+      break;
+    case 'advanced':
+      quizQuestions = ADVANCED_QUIZ;
+      break;
+    default:
+      quizQuestions = BEGINNER_QUIZ;
+  }
+
   const [quizStarted, setQuizStarted] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -12,25 +35,25 @@ export default function QuizPage() {
   const [showResult, setShowResult] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(QUIZ_QUESTIONS[0].timeLimit);
+  const [timeLeft, setTimeLeft] = useState(quizQuestions[0]?.timeLimit || 30);
   const [timerRunning, setTimerRunning] = useState(false);
 
   // Timer Logic
   useEffect(() => {
-    if (quizStarted && currentQuestionIndex < QUIZ_QUESTIONS.length && timerRunning && timeLeft > 0) {
+    if (quizStarted && currentQuestionIndex < quizQuestions.length && timerRunning && timeLeft > 0) {
       const timer = setTimeout(() => {
         setTimeLeft(timeLeft - 1);
       }, 1000);
       return () => clearTimeout(timer);
     } else if (timeLeft === 0 && timerRunning) {
-    //   handleSubmitAnswer();
+      handleSubmitAnswer();
     }
   }, [timeLeft, timerRunning, quizStarted, currentQuestionIndex]);
 
   const startQuiz = useCallback(() => {
     setQuizStarted(true);
     setTimerRunning(true);
-    setTimeLeft(QUIZ_QUESTIONS[0].timeLimit);
+    setTimeLeft(quizQuestions[0].timeLimit);
     setCurrentQuestionIndex(0);
     setScore(0);
     setShowResult(false);
@@ -54,16 +77,15 @@ export default function QuizPage() {
       setScore(prevScore => prevScore + 1);
     }
 
-    // Show feedback for 1.5 seconds
     await new Promise(resolve => setTimeout(resolve, 1500));
 
     const nextIndex = currentQuestionIndex + 1;
-    if (nextIndex < QUIZ_QUESTIONS.length) {
+    if (nextIndex < quizQuestions.length) {
       setCurrentQuestionIndex(nextIndex);
       setSelectedOption(null);
       setIsSubmitting(false);
       setShowFeedback(false);
-      setTimeLeft(QUIZ_QUESTIONS[nextIndex].timeLimit);
+      setTimeLeft(quizQuestions[nextIndex].timeLimit);
       setTimerRunning(true);
     } else {
       setShowResult(true);
@@ -72,31 +94,41 @@ export default function QuizPage() {
   }, [selectedOption, currentQuestionIndex, timeLeft]);
 
   if (!quizStarted) {
-    return <QuizStart onStart={startQuiz} />;
+    return (
+      <QuizStart
+        onStart={startQuiz}
+        levelName={QUIZ_LEVELS[level]}
+        totalQuestions={quizQuestions.length}
+      />
+    );
   }
 
   if (showResult) {
-    const finalScore = selectedOption?.isCorrect ? score : score;
-    const level = finalScore >= QUIZ_QUESTIONS.length * 0.7 ? 'advanced' : 
-        finalScore >= QUIZ_QUESTIONS.length * 0.5 ? 'intermediate' : 'beginner';
-    
+    const finalScore = score;
+    const total = quizQuestions.length;
+    const percentage = (finalScore / total) * 100;
+    let levelStatus;
+    if (percentage >= 70) levelStatus = 'advanced';
+    else if (percentage >= 50) levelStatus = 'intermediate';
+    else levelStatus = 'beginner';
+
     return (
       <QuizResult
         score={finalScore}
-        totalQuestions={QUIZ_QUESTIONS.length}
-        level={level}
+        totalQuestions={total}
+        level={levelStatus}
         onRestart={startQuiz}
       />
     );
   }
 
-  const currentQuestion = QUIZ_QUESTIONS[currentQuestionIndex];
+  const currentQuestion = quizQuestions[currentQuestionIndex];
 
   return (
     <QuizQuestion
       question={currentQuestion}
       currentIndex={currentQuestionIndex}
-      totalQuestions={QUIZ_QUESTIONS.length}
+      totalQuestions={quizQuestions.length}
       selectedOption={selectedOption}
       onSelectOption={handleSelectOption}
       onSubmit={handleSubmitAnswer}
