@@ -1,31 +1,43 @@
-// src/pages/QuizPage.jsx
 import React, { useState, useEffect, useCallback } from 'react';
 import { QuizStart } from '../components/Quiz/QuizStart';
 import { QuizQuestion } from '../components/Quiz/QuizQuestion';
 import { QuizResult } from '../components/Quiz/QuizResult';
+
+// ✅ استيراد صحيح من الملفات التي تحتوي عليها
+import { QUIZ_QUESTIONS as LEVEL_ASSESSMENT_QUESTIONS } from '../data/quizQuestions.js'; // ← هنا
 import {
   BEGINNER_QUIZ,
   INTERMEDIATE_QUIZ,
   ADVANCED_QUIZ,
   QUIZ_LEVELS
-} from '../data/quizQuestionsByLevel';
+} from '../data/quizQuestionsByLevel.js'; 
 
-// تحقق من المستوى من URL أو من الـ props (سنستخدم هنا الـ params)
-export default function QuizPage({ level = 'beginner' }) {
-  // تحديد الكويز حسب المستوى
+export default function QuizPage({ type = 'assessment', level = 'beginner' }) {
   let quizQuestions;
-  switch (level) {
-    case 'beginner':
-      quizQuestions = BEGINNER_QUIZ;
-      break;
-    case 'intermediate':
-      quizQuestions = INTERMEDIATE_QUIZ;
-      break;
-    case 'advanced':
-      quizQuestions = ADVANCED_QUIZ;
-      break;
-    default:
-      quizQuestions = BEGINNER_QUIZ;
+  let quizTitle = '';
+
+  if (type === 'assessment') {
+    quizQuestions = LEVEL_ASSESSMENT_QUESTIONS;
+    quizTitle = 'اختبار تحديد المستوى';
+  } else {
+    // نوع الكويز: end-of-program
+    switch (level) {
+      case 'beginner':
+        quizQuestions = BEGINNER_QUIZ;
+        quizTitle = 'اختبار نهاية البرنامج - مبتدئ';
+        break;
+      case 'intermediate':
+        quizQuestions = INTERMEDIATE_QUIZ;
+        quizTitle = 'اختبار نهاية البرنامج - متوسط';
+        break;
+      case 'advanced':
+        quizQuestions = ADVANCED_QUIZ;
+        quizTitle = 'اختبار نهاية البرنامج - متقدم';
+        break;
+      default:
+        quizQuestions = BEGINNER_QUIZ;
+        quizTitle = 'اختبار نهاية البرنامج';
+    }
   }
 
   const [quizStarted, setQuizStarted] = useState(false);
@@ -38,7 +50,6 @@ export default function QuizPage({ level = 'beginner' }) {
   const [timeLeft, setTimeLeft] = useState(quizQuestions[0]?.timeLimit || 30);
   const [timerRunning, setTimerRunning] = useState(false);
 
-  // Timer Logic
   useEffect(() => {
     if (quizStarted && currentQuestionIndex < quizQuestions.length && timerRunning && timeLeft > 0) {
       const timer = setTimeout(() => {
@@ -97,7 +108,7 @@ export default function QuizPage({ level = 'beginner' }) {
     return (
       <QuizStart
         onStart={startQuiz}
-        levelName={QUIZ_LEVELS[level]}
+        title={quizTitle}
         totalQuestions={quizQuestions.length}
       />
     );
@@ -118,6 +129,7 @@ export default function QuizPage({ level = 'beginner' }) {
         totalQuestions={total}
         level={levelStatus}
         onRestart={startQuiz}
+        isAssessment={type === 'assessment'}
       />
     );
   }

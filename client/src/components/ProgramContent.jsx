@@ -116,22 +116,21 @@ export default function ProgramContent({ program, onBack }) {
               </div>
             )}
 
-            {/* زر أبدأ الاختبار */}
-      {selectedProgram.level && (
-        <div className="flex justify-center mt-8">
-          <button
-            onClick={() => {
-              // فتح صفحة الكويز باستخدام مستوى البرنامج
-              const level = selectedProgram.level.toLowerCase(); // مبتدئ -> beginner
-              window.open(`/QuizPage`); // أو استخدم router إذا كنت تستخدم React Router
-            }}
-            className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl shadow-lg transition-all duration-300 flex items-center gap-2"
-          >
-            <span>🏁 أبدأ الاختبار</span>
-            <ArrowRight className="w-5 h-5" />
-          </button>
-        </div>
-      )}
+    {/* زر أبدأ الاختبار */}
+    {selectedProgram.level && (
+      <div className="flex justify-center mt-8">
+        <button
+          onClick={() => {
+            // const level = selectedProgram.level.toLowerCase(); // "مبتدئ" → "beginner"
+            window.open(`/quiz/end/}`);
+          }}
+          className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl shadow-lg transition-all duration-300 flex items-center gap-2"
+        >
+          <span>🏁 أبدأ اختبار نهاية البرنامج</span>
+          <ArrowRight className="w-5 h-5" />
+        </button>
+      </div>
+    )}
 
           </div>
         </div>
