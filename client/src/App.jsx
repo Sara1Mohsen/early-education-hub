@@ -6,13 +6,14 @@ import QuizPage from './pages/QuizPage';
 import AuthPage from './pages/AuthPage';
 import { AuthProvider } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
+
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <div className="min-h-screen">
-          {/* <Navbar /> */}
-
+          <Navbar />
+          
           <Routes>
             <Route path="/login" element={<AuthPage />} />
             <Route path="/" element={<HomePage3D />} />
