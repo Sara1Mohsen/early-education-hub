@@ -355,7 +355,7 @@ export function Navbar() {
               {/* زرار المقدمة */}
               <button 
                 onClick={() => {
-                  console.log('تم الضغط على زرار المقدمة!');
+                  // console.log('تم الضغط على زرار المقدمة!');
                   setShowIntro(true);
                 }}
                 style={{ 
@@ -377,6 +377,7 @@ export function Navbar() {
               <a href="/#features" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>المميزات</a>
               <a href="programs" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>برامج الذكاء الاصطناعي</a>
               <button 
+              onClick={() => window.location.href = '/login'}
                 style={{
                 background: 'linear-gradient(to right, #a855f7, #ec4899)',
                 color: '#fff',
@@ -397,7 +398,7 @@ export function Navbar() {
       <IntroModal 
         isOpen={showIntro} 
         onClose={() => {
-          console.log('تم إغلاق المقدمة!');
+          // console.log('تم إغلاق المقدمة!');
           setShowIntro(false);
         }} 
       />

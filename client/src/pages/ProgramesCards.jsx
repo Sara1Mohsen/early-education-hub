@@ -4,6 +4,7 @@ import ProgramCard from '../components/ProgramCard';
 import ProgramContent from '../components/ProgramContent';
 import { programs } from '../data/programsData';
 
+
 export default function ProgramesCards() {
   const [selectedProgram, setSelectedProgram] = useState(null);
   const location = useLocation();
@@ -44,7 +45,7 @@ export default function ProgramesCards() {
         <div className="bg-gradient-to-r  from-slate-900 via-slate-800 to-slate-900 text-white py-12 px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-4">
-              برامج المستوى {userLevel}
+              برامج المستوى ال{userLevel}
             </h1>
             <p className="text-xl text-purple-100">
               {filteredPrograms.length} برنامج مخصص لمستواك
@@ -52,6 +53,7 @@ export default function ProgramesCards() {
           </div>
         </div>
       )}
+
 
       {/* Programs Grid */}
       <div className="w-full   px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
@@ -71,6 +73,19 @@ export default function ProgramesCards() {
           </div>
         )}
       </div>
+
+          {/* زر أبدأ الاختبار */}
+      {/* {userLevel && (
+        <div className="max-w-7xl mx-auto mb-8 flex justify-center">
+          <button
+            onClick={() => setShowQuiz(true)} 
+            className="px-10 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center gap-3 text-lg"
+          >
+            <span className="text-2xl">🏁</span>
+            <span>أبدأ اختبار نهاية المستوى ال{userLevel}</span>
+          </button>
+        </div>
+      )} */}
     </div>
   );
 }

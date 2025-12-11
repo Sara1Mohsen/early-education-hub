@@ -124,7 +124,7 @@ export default function ProgramContent({ program, onBack }) {
             // const level = selectedProgram.level.toLowerCase(); // "مبتدئ" → "beginner"
             window.open(`/quiz/end/}`);
           }}
-          className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl shadow-lg transition-all duration-300 flex items-center gap-2"
+          className="px-8 py-3  hover:bg-blue-500 text-white font-bold rounded-xl shadow-lg transition-all duration-300 flex items-center gap-2"
         >
           <span>🏁 أبدأ اختبار نهاية البرنامج</span>
           <ArrowRight className="w-5 h-5" />

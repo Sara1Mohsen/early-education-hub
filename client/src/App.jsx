@@ -12,7 +12,7 @@ function App() {
     <AuthProvider>
       <BrowserRouter>
         <div className="min-h-screen">
-          <Navbar />
+          {/* <Navbar /> */}
           
           <Routes>
             <Route path="/login" element={<AuthPage />} />
@@ -24,8 +24,14 @@ function App() {
                  <ProgramesCards />
                  </ProtectedRoute>
                  } />
-             
-            
+                     <Route 
+                path="/quiz/assessment" 
+                element={<QuizPage />} 
+        />
+                    <Route 
+          path="/quiz/:type/:level" 
+          element={<QuizPage />} 
+        />
             <Route path="/QuizPage" element={<QuizPage />} />
           </Routes>
 

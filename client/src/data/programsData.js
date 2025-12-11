@@ -2,12 +2,12 @@
 import tripoAI from "../assets/T.png";
 import splineAI from "../assets/SP.png";
 import vectaryImage from "../assets/AK.png";
-import aFrameImage from "../assets/AR.png";
-import aeroImage from "../assets/AR.png";
-import sketchupImage from "../assets/SK.png";
-import arkiImage from "../assets/AK.png";
-import autodeskImage from "../assets/AN.png";
-import blenderImage from "../assets/BL.png";
+import aFrameImage from "../assets/adobe.jpeg";
+import aeroImage from "../assets/adobe.jpeg"; //
+import sketchupImage from "../assets/SK.png" ; //
+import arkiImage from "../assets/AK.png"; //
+import autodeskImage from "../assets/AN.png"; //
+import blenderImage from "../assets/BL.png"; //
 
 // // البيانات
 export const programs = [
@@ -21,7 +21,10 @@ export const programs = [
     image: tripoAI, // ✅ صحيح
     level: "مبتدئ",
     duration: "أسبوعين",
-    fullDescription: ``,
+    fullDescription: `يتيح Tripo AI إنشاء نماذج ثلاثية الأبعاد اعتماداً على الأوامر النصية أو الصور،
+مما يساعد المتدربين على فهم مفاهيم التصميم ثلاثي الأبعاد بطريقة مبسطة.
+يُستخدم البرنامج في المجالات التعليمية، وتصميم الألعاب، والعروض التفاعلية،
+كما يدعم تصدير المجسمات لاستخدامها في برامج 3D أخرى.`,
         features: [
       'نمذجة ثلاثية الأبعاد متقدمة للغاية',
       'أدوات الرسوم المتحركة والأنيميشن',
@@ -63,7 +66,10 @@ export const programs = [
     image: vectaryImage, // ✅
     level: "متوسط",
     duration: "4 أسابيع",
-    fullDescription: ``,
+    fullDescription: `يتيح Vectary تصميم نماذج ومشاهد ثلاثية الأبعاد كاملة باستخدام أدوات مرئية مبسطة،
+مع إمكانية إضافة الخامات، والإضاءة، والتفاعلات.
+يُستخدم البرنامج في تصميم المنتجات، والعروض التفاعلية، والتعليم الإلكتروني،
+كما يدعم التصدير للاستخدام على الويب والواقع المعزز.`,
     features: [
       'نمذجة ثلاثية الأبعاد متقدمة للغاية',
       'أدوات الرسوم المتحركة والأنيميشن',
@@ -84,7 +90,10 @@ export const programs = [
     image: aFrameImage, // ✅
     level: "متوسط",
     duration: "4 أسابيع",
-    fullDescription: ``,
+    fullDescription: `يح A-Frame بناء مشاهد 3D و VR باستخدام وسوم HTML بسيطة،
+مما يجعله مناسباً لمطوري الويب وطلاب تكنولوجيا التعليم.
+يُستخدم في إنشاء بيئات افتراضية تعليمية،
+ويدعم إضافة التفاعلات والوسائط المتعددة ونشر المشاهد بسهولة عبر الإنترنت.`,
     features: [
       'نمذجة ثلاثية الأبعاد متقدمة للغاية',
       'أدوات الرسوم المتحركة والأنيميشن',
@@ -105,7 +114,10 @@ export const programs = [
     image: aeroImage, // ✅
     level: "متوسط",
     duration: "5 أسابيع",
-    fullDescription: ``,
+    fullDescription: `يتيح البرنامج استيراد النماذج ثلاثية الأبعاد وبنائها داخل بيئات واقع معزز تفاعلية،
+مع إمكانية إضافة الحركات والتفاعلات.
+يُستخدم Adobe Aero في التعليم، والتسويق، والعروض التفاعلية،
+ويساعد المتدربين على تصميم تجارب AR احترافية بسهولة.`,
     features: [
       'نمذجة ثلاثية الأبعاد متقدمة للغاية',
       'أدوات الرسوم المتحركة والأنيميشن',
@@ -126,28 +138,10 @@ export const programs = [
     image: sketchupImage, // ✅
     level: "متقدم",
     duration: "6 أسابيع",
-    fullDescription: ``,
-    features: [
-      'نمذجة ثلاثية الأبعاد متقدمة للغاية',
-      'أدوات الرسوم المتحركة والأنيميشن',
-      'محرك إضاءة متطور (Cycles و Eevee)',
-      'نظام المواد والتكتشرات المعقدة',
-      'أدوات النحت الرقمي (Sculpting)',
-      'المحاكاة الفيزيائية (السوائل، القماش، الجزيئات)',
-      'تحرير الفيديو والمونتاج',
-      'تصميم الألعاب (مدمج مع محرك ألعاب)',]
-  },
-  {
-    id: 9,
-    chapter: "الفصل الخامس",
-    name: "Arki",
-    description: "تصميم معماري 3D أونلاين احترافي",
-    icon: "Building",
-    accentColor: "#75c3ff",
-    image: arkiImage, // ✅
-    level: "احترافي",
-    duration: "8 أسابيع",
-    fullDescription: `هي منصة متخصصة في عرض النماذج المعمارية ثلاثية الأبعاد في بيئة الواقع المعزز، وتُستخدم بكثرة في مجالات الهندسة والعمارة. تمكّن المستخدمين من رؤية التصاميم داخل البيئة الحقيقية، والتفاعل معها من زوايا مختلفة، مما يساعد في تحليل الأبعاد والتخطيط بدقة أكبر`,
+    fullDescription: `يتيح SketchUp تصميم المباني والمساحات الداخلية والخارجية بدقة،
+مع توفير أدوات متقدمة للنمذجة وإضافة الخامات.
+يُستخدم البرنامج في المجالات المعمارية والتعليمية،
+ويساعد المتدربين على تحويل الأفكار إلى نماذج ثلاثية الأبعاد واقعية.`,
     features: [
       'نمذجة ثلاثية الأبعاد متقدمة للغاية',
       'أدوات الرسوم المتحركة والأنيميشن',
@@ -168,7 +162,10 @@ export const programs = [
     image: autodeskImage, // ✅
     level: "متقدم",
     duration: "10 أسابيع",
-    fullDescription: `1`,
+    fullDescription: `تتيح هذه البرامج إنشاء نماذج ثلاثية الأبعاد معقدة،
+وتطبيق الخامات والإضاءة الواقعية، وتنفيذ التحريك الاحترافي.
+تُستخدم في المشاريع السينمائية والألعاب الرقمية،
+وتُعد مناسبة للمستوى المتقدم والاحترافي في مجال 3D.`,
     features: [
       'نمذجة ثلاثية الأبعاد متقدمة للغاية',
       'أدوات الرسوم المتحركة والأنيميشن',
