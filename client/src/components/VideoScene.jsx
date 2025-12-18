@@ -21,10 +21,7 @@ return (
         absolute inset-0 w-full h-full 
         object-cover opacity-50 
         "
-        // style={{
-        //             maskImage: 'linear-gradient(to bottom, transparent, white 20%, white 80%, transparent)',
-        //             WebkitMaskImage: 'linear-gradient(to bottom, transparent, white 20%, white 80%, transparent)' // للتحقق من دعم المتصفحات
-        //         }}
+
     />
 
 

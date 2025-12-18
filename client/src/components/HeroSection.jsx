@@ -3,11 +3,11 @@ import { ArrowLeft } from 'lucide-react';
 import { Scene3D } from './Scene3D';
 
 export function HeroSection({ canvasRef }) {
-  const stats = [
-    { value: '1000+', label: 'مستخدم نشط' },
-    { value: '50+', label: 'مشهد ثلاثي الأبعاد' },
-    { value: '24/7', label: 'دعم الذكاء الاصطناعي' },
-  ];
+  // const stats = [
+  //   { value: '1000+', label: 'مستخدم نشط' },
+  //   { value: '50+', label: 'مشهد ثلاثي الأبعاد' },
+  //   { value: '24/7', label: 'دعم الذكاء الاصطناعي' },
+  // ];
 
   return (
     <div id="home" style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
@@ -94,12 +94,12 @@ export function HeroSection({ canvasRef }) {
             maxWidth: '600px',
             margin: '4rem auto 0'
           }}>
-            {stats.map((stat, index) => (
+            {/* {stats.map((stat, index) => (
               <div key={index} style={{ textAlign: 'center' }}>
                 <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#fff', marginBottom: '0.5rem' }}>{stat.value}</div>
                 <div style={{ color: '#9ca3af', fontSize: '0.875rem' }}>{stat.label}</div>
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
       </div>

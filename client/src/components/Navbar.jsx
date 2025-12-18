@@ -374,7 +374,7 @@ export function Navbar() {
               </button>
               
               <a href="/QuizPage" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>الاختبار</a>
-              <a href="/#features" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>المميزات</a>
+              {/* <a href="/#features" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>المميزات</a> */}
               <a href="programs" style={{ color: '#fff', textDecoration: 'none', transition: 'color 0.3s' }}>برامج الذكاء الاصطناعي</a>
               <button 
               onClick={() => window.location.href = '/login'}

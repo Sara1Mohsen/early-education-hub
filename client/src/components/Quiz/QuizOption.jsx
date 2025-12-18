@@ -1,3 +1,4 @@
+// QuizOption.jsx
 import React from 'react';
 import { CheckCircle, XCircle } from 'lucide-react';
 
@@ -24,17 +25,22 @@ export function QuizOption({ option, isSelected, isDisabled, onClick, showFeedba
 
   return (
     <div
+      style={{
+        width: '100%',
+        maxWidth: '320px',
+        margin: '0 auto'
+      }}
       className={cardClasses}
       onClick={() => !isDisabled && onClick(option)}
     >
       <p>{option.text}</p>
       
       {showFeedback && isSelected && (
-        <div className="mt-3 flex justify-center">
+        <div style={{ marginTop: '1rem', display: 'flex', justifyContent: 'center' }}>
           {option.isCorrect ? (
-            <CheckCircle className="w-7 h-7 text-green-600" />
+            <CheckCircle style={{ width: '28px', height: '28px', color: '#16a34a' }} />
           ) : (
-            <XCircle className="w-7 h-7 text-red-600" />
+            <XCircle style={{ width: '28px', height: '28px', color: '#b91c1c' }} />
           )}
         </div>
       )}

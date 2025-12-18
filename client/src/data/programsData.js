@@ -12,9 +12,10 @@ import blenderImage from "../assets/BL.png"; //
 // // البيانات
 export const programs = [
   {
-    id: 3,
+    id: 1,
     chapter: "الفصل الأول",
     name: "Tripo AI",
+    title :"Tripo AI",
     description: "توليد مجسمات 3D بالذكاء الاصطناعي",
     icon: "Cpu",
     accentColor: "#75c3ff",
@@ -36,9 +37,10 @@ export const programs = [
       'تصميم الألعاب (مدمج مع محرك ألعاب)',]
   },
   {
-    id: 4,
+    id: 2,
     chapter: "الفصل الأول",
     name: "Spline AI",
+    title :"Spline AI",
     description: "تصميم مشاهد 3D تفاعلية على الويب",
     icon: "Box",
     accentColor: "#75c3ff",
@@ -57,9 +59,10 @@ export const programs = [
       'تصميم الألعاب (مدمج مع محرك ألعاب)',]
   },
   {
-    id: 5,
+    id: 3,
     chapter: "الفصل الأول",
     name: "Vectary",
+    title :"Vectary",
     description: "تصميم مشهد 3D كامل أونلاين",
     icon: "Layers",
     accentColor: "#75c3ff",
@@ -81,9 +84,10 @@ export const programs = [
       'تصميم الألعاب (مدمج مع محرك ألعاب)',]
   },
   {
-    id: 6,
+    id: 4,
     chapter: "الفصل الثالث",
     name: "A-Frame",
+    title :"A-Frame",
     description: "إطار عمل HTML لعمل مشاهد VR/3D",
     icon: "Code",
     accentColor: "#75c3ff",
@@ -105,9 +109,10 @@ export const programs = [
       'تصميم الألعاب (مدمج مع محرك ألعاب)',]
   },
   {
-    id: 7,
+    id: 5,
     chapter: "الفصل الرابع",
     name: "Adobe Aero",
+    title : "Adobe Aero",
     description: "عرض موديلات 3D في الواقع المعزز AR",
     icon: "Eye",
     accentColor: "#75c3ff",
@@ -129,9 +134,10 @@ export const programs = [
       'تصميم الألعاب (مدمج مع محرك ألعاب)',]
   },
   {
-    id: 8,
+    id: 6,
     chapter: "الفصل الرابع",
     name: "SketchUp",
+    title :"SketchUp",
     description: "تصميم معماري ونماذج 3D احترافية",
     icon: "Building",
     accentColor: "#75c3ff",
@@ -153,9 +159,10 @@ export const programs = [
       'تصميم الألعاب (مدمج مع محرك ألعاب)',]
   },
   {
-    id: 10,
+    id: 7,
     chapter: "الفصل الخامس",
     name: "Autodesk (3ds Max/Maya)",
+    title :"Autodesk (3ds Max/Maya)",
     description: "نمذجة وأنيميشن احترافي",
     icon: "Clapperboard",
     accentColor: "#75c3ff",
@@ -177,9 +184,10 @@ export const programs = [
       'تصميم الألعاب (مدمج مع محرك ألعاب)',]
   },
   {
-    id: 11,
+    id: 8,
     chapter: "الفصل الخامس",
     name: "Blender",
+    title :"Blender",
     description: "أقوى برنامج مفتوح المصدر للتصميم 3D",
     icon: "PackageOpen",
     accentColor: "#75c3ff",

@@ -36,48 +36,166 @@ export function LoginForm({ onSwitchToRegister }) {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto">
-      <div className="bg-white rounded-2xl shadow-2xl p-8">
-        <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Lock className="w-8 h-8 text-white" />
+    <div style={{
+      minHeight: '100vh',
+      background: 'linear-gradient(to bottom, #000, #1a0b2e)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      direction: 'rtl',
+      padding: '2rem'
+    }}>
+      {/* Form Container */}
+      <div style={{
+        background: 'rgba(255, 255, 255, 0.1)',
+        backdropFilter: 'blur(12px)',
+        borderRadius: '24px',
+        border: '1px solid rgba(255, 255, 255, 0.2)',
+        overflow: 'hidden',
+        width: '100%',
+        maxWidth: '700px',
+        boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3)',
+        textAlign: 'right'
+      }}>
+        {/* Header */}
+        <div style={{
+          background: 'linear-gradient(to right, #4f46e5, #7e22ce)',
+          padding: '2rem',
+          textAlign: 'center'
+        }}>
+          <div style={{
+            width: '64px',
+            height: '64px',
+            background: 'linear-gradient(to right, #a855f7, #ec4899)',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0 auto 1rem'
+          }}>
+            <Lock style={{ width: '32px', height: '32px', color: '#fff' }} />
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">مرحباً بعودتك</h2>
-          <p className="text-gray-600">سجل دخولك للمتابعة</p>
+          <h2 style={{
+            fontSize: '1.75rem',
+            fontWeight: 'bold',
+            color: '#fff',
+            marginBottom: '0.5rem'
+          }}>
+            مرحباً بعودتك
+          </h2>
+          <p style={{
+            fontSize: '1rem',
+            color: '#e0e7ff',
+            opacity: 0.9
+          }}>
+            سجّل دخولك للمتابعة
+          </p>
         </div>
 
+        {/* Error Message */}
         {error && (
-          <div className="bg-red-50 border-r-4 border-red-500 p-4 mb-6 rounded-lg flex items-start gap-3">
-            <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-            <p className="text-red-700 text-sm">{error}</p>
+          <div style={{
+            background: '#fee2e2',
+            border: '1px solid #f87171',
+            color: '#b91c1c',
+            padding: '1rem',
+            margin: '1rem',
+            borderRadius: '12px',
+            fontSize: '0.875rem',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem'
+          }}>
+            <AlertCircle style={{ width: '16px', height: '16px' }} />
+            <span>{error}</span>
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">البريد الإلكتروني</label>
-            <div className="relative">
-              <Mail className="absolute right-2 top-2  w-4 h-4 text-gray-400" />
+        {/* Form */}
+        <form onSubmit={handleSubmit} style={{ padding: '2rem' }}>
+          <div style={{ marginBottom: '1.5rem' }}>
+            <label style={{
+              fontSize: '0.9rem',
+              fontWeight: '600',
+              color: '#fff',
+              marginBottom: '0.5rem',
+              display: 'block'
+            }}>
+              البريد الإلكتروني
+            </label>
+            <div style={{
+              position: 'relative'
+            }}>
+              <Mail style={{
+                position: 'absolute',
+                right: '12px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                width: '16px',
+                height: '16px',
+                color: '#9ca3af'
+              }} />
               <input
                 type="email"
                 value={formData.email}
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
-                className="w-full pr-10 pl-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                style={{
+                  width: '100%',
+                  padding: '0.75rem 1rem',
+                  paddingLeft: '1rem',
+                  paddingRight: '32px',
+                  border: '1px solid #d1d5db',
+                  borderRadius: '12px',
+                  background: '#f9fafb',
+                  fontSize: '0.95rem',
+                  color: '#1f2937',
+                  outline: 'none',
+                  transition: 'all 0.2s ease'
+                }}
                 placeholder="example@email.com"
               />
             </div>
           </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">كلمة المرور</label>
-            <div className="relative">
-              <Lock className="absolute right-3 top-1 w-4 h-4 text-gray-400" />
+          <div style={{ marginBottom: '1.5rem' }}>
+            <label style={{
+              fontSize: '0.9rem',
+              fontWeight: '600',
+              color: '#fff',
+              marginBottom: '0.5rem',
+              display: 'block'
+            }}>
+              كلمة المرور
+            </label>
+            <div style={{
+              position: 'relative'
+            }}>
+              <Lock style={{
+                position: 'absolute',
+                right: '12px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                width: '16px',
+                height: '16px',
+                color: '#9ca3af'
+              }} />
               <input
                 type="password"
                 value={formData.password}
-                onChange={(e) => setFormData({...formData, password: e.target.value})}
-                className="w-full pr-10 pl-4 py-3  border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                
+                onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                style={{
+                  width: '100%',
+                  padding: '0.75rem 1rem',
+                  paddingLeft: '1rem',
+                  paddingRight: '32px',
+                  border: '1px solid #d1d5db',
+                  borderRadius: '12px',
+                  background: '#f9fafb',
+                  fontSize: '0.95rem',
+                  color: '#1f2937',
+                  outline: 'none',
+                  transition: 'all 0.2s ease'
+                }}
               />
             </div>
           </div>
@@ -85,18 +203,58 @@ export function LoginForm({ onSwitchToRegister }) {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            style={{
+              width: '100%',
+              background: 'linear-gradient(to right, #4f46e5, #7e22ce)',
+              color: '#fff',
+              padding: '0.75rem 1.5rem',
+              borderRadius: '50px',
+              border: 'none',
+              fontSize: '1.125rem',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.5rem',
+              boxShadow: '0 0 30px rgba(79, 70, 229, 0.5)',
+              transition: 'transform 0.2s ease'
+            }}
+            onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'}
+            onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
           >
-            {loading ? 'جاري تسجيل الدخول...' : 'تسجيل الدخول'}
+            {loading ? (
+              <>
+                <Loader style={{ width: '20px', height: '20px', animation: 'spin 1s linear infinite' }} />
+                <span>جاري تسجيل الدخول...</span>
+              </>
+            ) : (
+              'تسجيل الدخول'
+            )}
           </button>
         </form>
 
-        <div className="mt-6 text-center">
-          <p className="text-gray-600">
+        {/* Footer */}
+        <div style={{
+          padding: '1.5rem',
+          borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+          textAlign: 'center'
+        }}>
+          <p style={{
+            fontSize: '0.9rem',
+            color: '#d1d5db'
+          }}>
             ليس لديك حساب؟{' '}
             <button
               onClick={onSwitchToRegister}
-              className="text-purple-600 font-semibold hover:text-purple-700"
+              style={{
+                color: '#a855f7',
+                fontWeight: '600',
+                background: 'transparent',
+                border: 'none',
+                cursor: 'pointer',
+                textDecoration: 'underline'
+              }}
             >
               إنشاء حساب جديد
             </button>

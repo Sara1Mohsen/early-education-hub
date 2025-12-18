@@ -3,20 +3,51 @@ import { BookOpen, Clock, Award } from 'lucide-react';
 
 export function QuizStart({ onStart }) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <div className="max-w-2xl mx-auto text-center space-y-8">
-        <div className="mb-8">
-          <Award className="w-20 h-20 mx-auto text-amber-400 mb-4" />
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+    <div style={{
+      minHeight: '100vh',
+      background: 'linear-gradient(to bottom, #000, #1a0b2e)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      direction: 'rtl',
+      padding: '2rem'
+    }}>
+      <div style={{
+        width: '100%',
+        maxWidth: '800px',
+        textAlign: 'right'
+      }}>
+        {/* Header */}
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <h1 style={{
+            fontSize: '2.5rem',
+            fontWeight: 'bold',
+            color: '#fff',
+            marginTop: '1rem'
+          }}>
             اختبار تحديد المستوى
           </h1>
         </div>
 
-        <div className="bg-slate-800/60 backdrop-blur-md rounded-2xl p-8 space-y-6 border border-slate-700">
-          <div className="flex items-start gap-4 text-right">
-            <BookOpen className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-1" />
+        {/* Description Card */}
+        <div style={{
+          background: 'rgba(255, 255, 255, 0.1)',
+          backdropFilter: 'blur(12px)',
+          borderRadius: '24px',
+          border: '1px solid rgba(255, 255, 255, 0.2)',
+          overflow: 'hidden',
+          padding: '2rem',
+          boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2)'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', marginBottom: '1.5rem' }}>
+            <BookOpen style={{ width: '24px', height: '24px', color: '#10b981', flexShrink: 0, marginTop: '0.25rem' }} />
             <div>
-              <p className="text-slate-300 leading-relaxed">
+              <p style={{
+                fontSize: '1rem',
+                color: '#d1d5db',
+                lineHeight: '1.6',
+                textAlign: 'justify'
+              }}>
                 يتكون الاختبار من 10 أسئلة تغطي أساسيات التصميم ثلاثي الأبعاد، 
                 الواقع الافتراضي، والواقع المعزز. سيساعدك هذا الاختبار في تحديد 
                 مستواك الحالي (مبتدئ أو متوسط).
@@ -24,35 +55,71 @@ export function QuizStart({ onStart }) {
             </div>
           </div>
 
-          <div className="flex items-start gap-4 text-right">
-            <Clock className="w-6 h-6 text-amber-400 flex-shrink-0 mt-1" />
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', marginBottom: '1.5rem' }}>
+            <Clock style={{ width: '24px', height: '24px', color: '#fbbf24', flexShrink: 0, marginTop: '0.25rem' }} />
             <div>
-              <p className="text-slate-300">
+              <p style={{
+                fontSize: '1rem',
+                color: '#d1d5db',
+                lineHeight: '1.6'
+              }}>
                 كل سؤال له وقت محدد (15-25 ثانية). تأكد من الإجابة قبل انتهاء الوقت!
               </p>
             </div>
           </div>
 
-          <div className="bg-amber-500/20 border border-amber-400/50 rounded-xl p-4">
-            <p className="text-sm text-amber-200">
-              💡 <strong>نصيحة:</strong> اقرأ السؤال بعناية قبل اختيار الإجابة
-            </p>
+          <div style={{
+            background: 'rgba(251, 191, 36, 0.2)',
+            border: '1px solid rgba(251, 191, 36, 0.3)',
+            borderRadius: '12px',
+            padding: '1rem',
+            color: '#fbbf24',
+            fontSize: '0.9rem',
+            textAlign: 'center',
+            fontWeight: '600'
+          }}>
+            💡 <strong>نصيحة:</strong> اقرأ السؤال بعناية قبل اختيار الإجابة
           </div>
         </div>
 
-        <button
-          onClick={onStart}
-          className="group bg-gradient-to-r from-amber-400 to-amber-500 text-slate-900 font-bold text-lg py-4 px-12 rounded-full shadow-xl hover:shadow-amber-500/30 transition-all duration-300 transform hover:scale-105 active:scale-100"
-        >
-          <span className="flex items-center gap-3">
-            ابدأ الاختبار الآن
-            <span className="group-hover:translate-x-1 transition-transform">←</span>
-          </span>
-        </button>
+        {/* Start Button */}
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+          <button
+            onClick={onStart}
+            style={{
+              background: 'linear-gradient(to right, #fbbf24, #f59e0b)',
+              color: '#1f2937',
+              padding: '1rem 2.5rem',
+              borderRadius: '50px',
+              border: 'none',
+              fontSize: '1.125rem',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.75rem',
+              boxShadow: '0 0 30px rgba(251, 191, 36, 0.5)',
+              transition: 'transform 0.2s ease'
+            }}
+            onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'}
+            onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
+          >
+            <span>ابدأ الاختبار الآن</span>
+            <span style={{ fontSize: '1.5rem' }}>←</span>
+          </button>
+        </div>
 
-        <p className="text-sm text-slate-400">
-          النتيجة سيتم حفظها تلقائيًا عند الانتهاء
-        </p>
+        {/* Footer */}
+        <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
+          <p style={{
+            fontSize: '0.875rem',
+            color: '#a855f7',
+            opacity: 0.7
+          }}>
+            النتيجة سيتم حفظها تلقائيًا عند الانتهاء
+          </p>
+        </div>
       </div>
     </div>
   );

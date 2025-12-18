@@ -52,89 +52,248 @@ export function QuizResult({ score, totalQuestions, onRestart }) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white p-6 flex items-center justify-center">
-      <div className="max-w-3xl w-full space-y-8">
+    <div style={{
+      minHeight: '100vh',
+      background: 'linear-gradient(to bottom, #000, #1a0b2e)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      direction: 'rtl',
+      padding: '2rem'
+    }}>
+      <div style={{
+        width: '100%',
+        maxWidth: '800px',
+        textAlign: 'right'
+      }}>
         {/* Success Animation */}
-        <div className="text-center">
-          <div className="text-8xl mb-4 animate-bounce">
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <div style={{
+            fontSize: '6rem',
+            marginBottom: '1rem',
+            animation: 'bounce 1.5s infinite'
+          }}>
             {levelInfo.icon}
           </div>
 
-          <p className="text-xl text-gray-300">
+          <p style={{
+            fontSize: '1.2rem',
+            color: '#d1d5db',
+            opacity: 0.9
+          }}>
             لقد أكملت اختبار تحديد المستوى
           </p>
         </div>
 
         {/* Score Card */}
-        <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 space-y-6">
+        <div style={{
+          background: 'rgba(255, 255, 255, 0.1)',
+          backdropFilter: 'blur(12px)',
+          borderRadius: '24px',
+          border: '1px solid rgba(255, 255, 255, 0.2)',
+          overflow: 'hidden',
+          padding: '2rem',
+          textAlign: 'center'
+        }}>
           {/* Score Display */}
-          <div className="text-center">
-            <div className="text-6xl font-extrabold mb-2">
-              <span className="bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
-                {score}
-              </span>
-              <span className="text-3xl text-gray-400"> / {totalQuestions}</span>
+          <div style={{ marginBottom: '2rem' }}>
+            <div style={{
+              fontSize: '3.5rem',
+              fontWeight: 'bold',
+              color: '#fbbf24',
+              marginBottom: '0.5rem'
+            }}>
+              <span style={{ color: '#fbbf24' }}>{score}</span>
+              <span style={{ color: '#d1d5db' }}> / {totalQuestions}</span>
             </div>
-            <p className="text-gray-300 text-lg">
+            <p style={{
+              fontSize: '1.2rem',
+              color: '#a855f7'
+            }}>
               نسبة النجاح: {percentage}%
             </p>
           </div>
 
           {/* Level Badge */}
-          <div className={`bg-gradient-to-r ${levelInfo.color} rounded-2xl p-6 text-center`}>
-            <Award className="w-16 h-16 mx-auto mb-3 text-white" />
-            <h2 className="text-3xl font-bold text-white mb-2">
+          <div style={{
+            background: 'linear-gradient(to right, #10b981, #059669)',
+            borderRadius: '20px',
+            padding: '2rem',
+            margin: '1rem auto',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            color: '#fff'
+          }}>
+            <Award style={{ width: '64px', height: '64px', marginBottom: '1rem' }} />
+            <h2 style={{
+              fontSize: '1.75rem',
+              fontWeight: 'bold',
+              marginBottom: '0.5rem'
+            }}>
               المستوى: {levelInfo.level}
             </h2>
-            <p className="text-white/90">
+            <p style={{
+              fontSize: '1rem',
+              opacity: 0.9,
+              lineHeight: '1.5'
+            }}>
               {levelInfo.message}
             </p>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-green-500/20 rounded-xl p-4 text-center">
-              <CheckCircle className="w-8 h-8 mx-auto mb-2 text-green-400" />
-              <div className="text-2xl font-bold">{score}</div>
-              <div className="text-sm text-gray-300">إجابات صحيحة</div>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
+            gap: '1rem',
+            marginTop: '1.5rem'
+          }}>
+            <div style={{
+              background: 'rgba(16, 185, 129, 0.2)',
+              borderRadius: '16px',
+              padding: '1rem',
+              border: '1px solid rgba(16, 185, 129, 0.3)'
+            }}>
+              <CheckCircle style={{ width: '32px', height: '32px', color: '#10b981', marginBottom: '0.5rem' }} />
+              <div style={{
+                fontSize: '1.25rem',
+                fontWeight: 'bold',
+                color: '#10b981'
+              }}>
+                {score}
+              </div>
+              <div style={{
+                fontSize: '0.875rem',
+                color: '#a855f7'
+              }}>
+                إجابات صحيحة
+              </div>
             </div>
             
-            <div className="bg-blue-500/20 rounded-xl p-4 text-center">
-              <TrendingUp className="w-8 h-8 mx-auto mb-2 text-blue-400" />
-              <div className="text-2xl font-bold">{percentage}%</div>
-              <div className="text-sm text-gray-300">نسبة الإتقان</div>
+            <div style={{
+              background: 'rgba(37, 99, 235, 0.2)',
+              borderRadius: '16px',
+              padding: '1rem',
+              border: '1px solid rgba(37, 99, 235, 0.3)'
+            }}>
+              <TrendingUp style={{ width: '32px', height: '32px', color: '#2563eb', marginBottom: '0.5rem' }} />
+              <div style={{
+                fontSize: '1.25rem',
+                fontWeight: 'bold',
+                color: '#2563eb'
+              }}>
+                {percentage}%
+              </div>
+              <div style={{
+                fontSize: '0.875rem',
+                color: '#a855f7'
+              }}>
+                نسبة الإتقان
+              </div>
             </div>
           </div>
 
           {/* Recommended Program */}
-          <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-xl p-4 border border-indigo-400/30">
-            <p className="text-center text-sm text-gray-300 mb-1">البرنامج المناسب لمستواك</p>
-            <p className="text-center text-xl font-bold text-indigo-300">
+          <div style={{
+            background: 'linear-gradient(to right, #6366f1, #8b5cf6)',
+            borderRadius: '16px',
+            padding: '1rem',
+            margin: '1.5rem auto',
+            textAlign: 'center',
+            color: '#fff'
+          }}>
+            <p style={{
+              fontSize: '0.9rem',
+              opacity: 0.9,
+              marginBottom: '0.25rem'
+            }}>
+              البرنامج المناسب لمستواك
+            </p>
+            <p style={{
+              fontSize: '1.25rem',
+              fontWeight: 'bold',
+              color: '#fff'
+            }}>
               {levelInfo.programName}
             </p>
           </div>
         </div>
 
         {/* Actions */}
-        <div className="space-y-4">
+        <div style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <button
             onClick={handleNavigateToProgram}
-            className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg py-4 px-8 rounded-full shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3"
+            style={{
+              background: 'linear-gradient(to right, #8b5cf6, #ec4899)',
+              color: '#fff',
+              padding: '1rem 2rem',
+              borderRadius: '50px',
+              border: 'none',
+              fontSize: '1.125rem',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.5rem',
+              boxShadow: '0 0 30px rgba(139, 92, 246, 0.5)',
+              transition: 'transform 0.2s ease'
+            }}
+            onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'}
+            onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
           >
             <span>ابدأ {levelInfo.programName}</span>
-            <ArrowRight className="w-6 h-6" />
+            <ArrowRight style={{ width: '20px', height: '20px' }} />
           </button>
 
           <button
             onClick={() => navigate('/programs')}
-            className="w-full bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 border border-white/20"
+            style={{
+              background: 'rgba(255, 255, 255, 0.1)',
+              backdropFilter: 'blur(8px)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              color: '#fff',
+              padding: '1rem 2rem',
+              borderRadius: '50px',
+              fontSize: '1.125rem',
+              fontWeight: '600',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease'
+            }}
+            onMouseOver={(e) => {
+              e.target.style.background = 'rgba(255, 255, 255, 0.2)';
+              e.target.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.2)';
+            }}
+            onMouseOut={(e) => {
+              e.target.style.background = 'rgba(255, 255, 255, 0.1)';
+              e.target.style.boxShadow = 'none';
+            }}
           >
             استكشف جميع البرامج
           </button>
 
           <button
             onClick={onRestart}
-            className="w-full bg-transparent hover:bg-white/5 text-gray-300 font-semibold py-3 px-8 rounded-full transition-all duration-300 border border-white/10"
+            style={{
+              background: 'transparent',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              color: '#d1d5db',
+              padding: '1rem 2rem',
+              borderRadius: '50px',
+              fontSize: '1.125rem',
+              fontWeight: '600',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease'
+            }}
+            onMouseOver={(e) => {
+              e.target.style.background = 'rgba(255, 255, 255, 0.1)';
+              e.target.style.border = '1px solid rgba(255, 255, 255, 0.3)';
+            }}
+            onMouseOut={(e) => {
+              e.target.style.background = 'transparent';
+              e.target.style.border = '1px solid rgba(255, 255, 255, 0.2)';
+            }}
           >
             إعادة الاختبار
           </button>
